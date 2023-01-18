@@ -79,6 +79,9 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+environment:
+  url: <%= ENV.fetch("MYSQL_URL") %>
+
 production:
   url: <%= ENV.fetch("MYSQL_URL") %>
 
